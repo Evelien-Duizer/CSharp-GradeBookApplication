@@ -114,21 +114,21 @@ namespace GradeBook.GradeBooks
             {
                 case 'A':
                     grade = 4;
-                    return grade;
+                    break;
                 case 'B':
                     grade = 3;
-                    return grade;
+                    break;
                 case 'C':
                     grade = 2;
-                    return grade;
+                    break;
                 case 'D':
                     grade = 1;
-                    return grade;
+                    break;
                 case 'F':
                     grade = 0;
-                    return grade;
+                    break;
             }
-            if(IsWeighted==true && studentType.Equals(StudentType.Honors) || studentType.Equals(StudentType.DualEnrolled))
+            if(IsWeighted && (studentType == StudentType.Honors || studentType == StudentType.DualEnrolled))
             {
                 grade += 1;
             }
